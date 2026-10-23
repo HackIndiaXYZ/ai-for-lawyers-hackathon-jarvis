@@ -26,10 +26,10 @@ def seed_database_if_empty():
 
         # 1. Seed Real Users (FR-001)
         users_seed = [
-            ("alex.carter@lexford.legal", "Alex Carter", "Managing Attorney", "attorney123", "AC"),
-            ("elena.rostova@lexford.legal", "Elena Rostova", "Senior Associate", "associate123", "ER"),
-            ("marcus.vance@lexford.legal", "Marcus Vance", "Paralegal", "paralegal123", "MV"),
-            ("sarah.jenkins@lexford.legal", "Sarah Jenkins", "Compliance Officer", "compliance123", "SJ"),
+            ("arjun.kapoor@lexford.legal", "Arjun Kapoor", "Managing Attorney", "attorney123", "AK"),
+            ("priya.nair@lexford.legal", "Priya Nair", "Senior Associate", "associate123", "PN"),
+            ("rohan.gupta@lexford.legal", "Rohan Gupta", "Paralegal", "paralegal123", "RG"),
+            ("kavita.desai@lexford.legal", "Kavita Desai", "Compliance Officer", "compliance123", "KD"),
         ]
 
         created_users = []
@@ -104,7 +104,7 @@ def seed_database_if_empty():
             status="Active",
             filing_date="2026-07-22",
             next_hearing_date="2026-10-23",
-            assigned_to="Alex Carter",
+            assigned_to="Arjun Kapoor",
             priority="High",
             claim_amount="₹45,00,000",
             notes="Action for damages and specific performance following breach of machinery supply contract."
@@ -124,7 +124,7 @@ def seed_database_if_empty():
             status="Active",
             filing_date="2026-08-10",
             next_hearing_date="2026-10-26",
-            assigned_to="Alex Carter",
+            assigned_to="Arjun Kapoor",
             priority="High",
             claim_amount="₹2,10,00,000",
             notes="Partition suit & Order 39 interim injunction restraining co-owners from alienating ancestral bungalow."
@@ -144,7 +144,7 @@ def seed_database_if_empty():
             status="In Review",
             filing_date="2026-09-01",
             next_hearing_date="2026-10-29",
-            assigned_to="Alex Carter",
+            assigned_to="Arjun Kapoor",
             priority="Medium",
             claim_amount="₹85,00,000",
             notes="Cross-border master SaaS software licensing agreement renegotiation and SLA violation audit."
@@ -164,7 +164,7 @@ def seed_database_if_empty():
             status="On Hold",
             filing_date="2026-06-15",
             next_hearing_date="2026-11-12",
-            assigned_to="Elena Rostova",
+            assigned_to="Priya Nair",
             priority="Low",
             claim_amount="₹32,00,000",
             notes="Wrongful termination, clawback of vested stock options, and ungrounded non-compete enforcement."
@@ -184,7 +184,7 @@ def seed_database_if_empty():
             status="Active",
             filing_date="2026-09-18",
             next_hearing_date="2026-11-04",
-            assigned_to="Alex Carter",
+            assigned_to="Arjun Kapoor",
             priority="High",
             claim_amount="₹5,50,00,000",
             notes="Suit under Section 108 of Patents Act 1970 for interim injunction on biosimilar composition."
@@ -214,7 +214,7 @@ def seed_database_if_empty():
             sha256_checksum=fhash1,
             storage_path=path1,
             file_content_text="Legal Demand Notice issued on 10 April 2026 demanding delivery under Master Supply Agreement.",
-            uploaded_by="Alex Carter",
+            uploaded_by="Arjun Kapoor",
             processing_status="Processed",
             notes="Formal demand notice before civil suit."
         )
@@ -231,7 +231,7 @@ def seed_database_if_empty():
             sha256_checksum=fhash2,
             storage_path=path2,
             file_content_text="Master Agreement dated March 12, 2024 containing liquidated damages clause 14 and jurisdiction clause 22.",
-            uploaded_by="Alex Carter",
+            uploaded_by="Arjun Kapoor",
             processing_status="Processed",
             notes="Governing supply contract."
         )
@@ -248,7 +248,7 @@ def seed_database_if_empty():
             sha256_checksum=fhash3,
             storage_path=path3,
             file_content_text="Application under Order 39 Rules 1 & 2 read with Section 151 CPC for urgent status quo orders.",
-            uploaded_by="Alex Carter",
+            uploaded_by="Arjun Kapoor",
             processing_status="Processed",
             notes="Urgent ad-interim stay application."
         )
@@ -265,7 +265,7 @@ def seed_database_if_empty():
             sha256_checksum=fhash4,
             storage_path=path4,
             file_content_text="SaaS master agreement between Northstar Trading and Verma Tech. Contains SIAC arbitration clause.",
-            uploaded_by="Alex Carter",
+            uploaded_by="Arjun Kapoor",
             processing_status="Processed",
             notes="Audit copy with redline comments."
         )
@@ -316,9 +316,9 @@ def seed_database_if_empty():
             risk_assessment=ai3_data["risk_assessment"],
             candidate_facts_json=ai3_data["candidate_facts_json"],
             review_status="Verified by Counsel",
-            reviewed_by="Alex Carter (Managing Attorney)",
+            reviewed_by="Arjun Kapoor (Managing Attorney)",
             reviewed_at=utc_now(),
-            advocate_signature="SIGNED://Alex Carter/BAR-CHAMBER-2026",
+            advocate_signature="SIGNED://Arjun Kapoor/BAR-CHAMBER-2026",
             is_advisory_acknowledged=True
         )
 
@@ -374,7 +374,7 @@ def seed_database_if_empty():
             case_number=case1.case_number,
             title="Review draft petition and rejoinder in Sharma case",
             description="Examine respondent's affidavit disputing receipt of default notice dated April 10.",
-            assigned_to="Alex Carter",
+            assigned_to="Arjun Kapoor",
             due_date="Today · 4:00 PM",
             priority="Urgent",
             is_completed=False
@@ -384,7 +384,7 @@ def seed_database_if_empty():
             case_number=case2.case_number,
             title="Prepare hearing documents and indexed exhibits for Mehta suit",
             description="Bind certified copy of 1991 Conveyance Deed and family tree chart.",
-            assigned_to="Alex Carter",
+            assigned_to="Arjun Kapoor",
             due_date="Tomorrow · 11:00 AM",
             priority="High",
             is_completed=False
@@ -394,12 +394,12 @@ def seed_database_if_empty():
 
         # 8. Seed Cryptographic Hash-Chained Audit Logs (FR-010)
         audit_events = [
-            ("WORKSPACE_INITIALIZED", "System", "WP-LEXFORD", "CasePilot AI legal workspace initialized with RBAC & cryptographic audit chain.", "Alex Carter", "Managing Attorney"),
-            ("USER_ENROLLED", "User", "1", "Managing Attorney Alex Carter enrolled with PBKDF2 authentication.", "System", "System"),
-            ("CASE_CREATED", "Case", "CP-2026-024", "Commercial litigation matter 'Sharma vs. Eastern Industries' registered.", "Alex Carter", "Managing Attorney"),
-            ("DOCUMENT_UPLOADED", "Document", str(doc1.id), f"Uploaded Notice_of_Breach_Eastern_Industries.pdf (SHA-256: {fhash1[:12]}...).", "Alex Carter", "Managing Attorney"),
+            ("WORKSPACE_INITIALIZED", "System", "WP-LEXFORD", "CasePilot AI legal workspace initialized with RBAC & cryptographic audit chain.", "Arjun Kapoor", "Managing Attorney"),
+            ("USER_ENROLLED", "User", "1", "Managing Attorney Arjun Kapoor enrolled with PBKDF2 authentication.", "System", "System"),
+            ("CASE_CREATED", "Case", "CP-2026-024", "Commercial litigation matter 'Sharma vs. Eastern Industries' registered.", "Arjun Kapoor", "Managing Attorney"),
+            ("DOCUMENT_UPLOADED", "Document", str(doc1.id), f"Uploaded Notice_of_Breach_Eastern_Industries.pdf (SHA-256: {fhash1[:12]}...).", "Arjun Kapoor", "Managing Attorney"),
             ("AI_ANALYSIS_EXECUTED", "AI Review", str(ai_summary1.id), "Automated advisory extraction executed with statutory provisions mapped.", "System AI Engine", "System"),
-            ("HEARING_SCHEDULED", "Hearing", str(h1.id), "Preliminary hearing scheduled before Hon'ble Judge R. K. Singhal in Courtroom 4.", "Alex Carter", "Managing Attorney")
+            ("HEARING_SCHEDULED", "Hearing", str(h1.id), "Preliminary hearing scheduled before Hon'ble Judge R. K. Singhal in Courtroom 4.", "Arjun Kapoor", "Managing Attorney")
         ]
 
         prev_hash = "GENESIS_ROOT_HASH_2026"

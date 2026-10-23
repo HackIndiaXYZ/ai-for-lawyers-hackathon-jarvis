@@ -65,7 +65,7 @@ class Case(SQLModel, table=True):
     status: str = Field(default="Active", max_length=50)  # Active, In Review, Hearing Scheduled, Closed, Archived
     filing_date: Optional[str] = Field(default=None, max_length=50)
     next_hearing_date: Optional[str] = Field(default=None, max_length=50)
-    assigned_to: str = Field(default="Alex Carter", max_length=100)
+    assigned_to: str = Field(default="Arjun Kapoor", max_length=100)
     priority: str = Field(default="Medium", max_length=30)  # High, Medium, Low
     claim_amount: Optional[str] = Field(default=None, max_length=50)
     notes: Optional[str] = None
@@ -86,7 +86,7 @@ class CaseCreate(SQLModel):
     status: str = "Active"
     filing_date: Optional[str] = None
     next_hearing_date: Optional[str] = None
-    assigned_to: str = "Alex Carter"
+    assigned_to: str = "Arjun Kapoor"
     priority: str = "Medium"
     claim_amount: Optional[str] = None
     notes: Optional[str] = None
@@ -129,7 +129,7 @@ class Document(SQLModel, table=True):
     storage_path: Optional[str] = Field(default=None, max_length=500)
     mime_type: str = Field(default="application/pdf", max_length=100)
     file_content_text: Optional[str] = None
-    uploaded_by: str = Field(default="Alex Carter", max_length=100)
+    uploaded_by: str = Field(default="Arjun Kapoor", max_length=100)
     processing_status: str = Field(default="Processed", max_length=50)  # Ready, Analyzing, Processed, Error
     notes: Optional[str] = None
     created_at: datetime = Field(default_factory=utc_now)
@@ -218,7 +218,7 @@ class TaskItem(SQLModel, table=True):
     case_number: Optional[str] = Field(default=None, max_length=50)
     title: str = Field(max_length=255)
     description: Optional[str] = None
-    assigned_to: str = Field(default="Alex Carter", max_length=100)
+    assigned_to: str = Field(default="Arjun Kapoor", max_length=100)
     due_date: str = Field(max_length=50)
     priority: str = Field(default="Medium", max_length=30)  # Urgent, High, Medium, Low
     is_completed: bool = Field(default=False)
@@ -231,7 +231,7 @@ class TaskCreate(SQLModel):
     case_number: Optional[str] = None
     title: str
     description: Optional[str] = None
-    assigned_to: str = "Alex Carter"
+    assigned_to: str = "Arjun Kapoor"
     due_date: str
     priority: str = "Medium"
 
@@ -244,7 +244,7 @@ class AuditLog(SQLModel, table=True):
 
     id: Optional[int] = Field(default=None, primary_key=True)
     action: str = Field(index=True, max_length=100)
-    actor_name: str = Field(default="Alex Carter", max_length=100)
+    actor_name: str = Field(default="Arjun Kapoor", max_length=100)
     actor_role: str = Field(default="Managing Attorney", max_length=100)
     entity_type: str = Field(index=True, max_length=80)
     entity_id: Optional[str] = Field(default=None, max_length=100)

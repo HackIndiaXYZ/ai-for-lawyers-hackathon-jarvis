@@ -3,7 +3,7 @@ CLI Utility to change demo user credentials in CasePilot AI.
 
 Usage:
     python change_password.py
-    python change_password.py alex.carter@lexford.legal MyNewPassword123
+    python change_password.py arjun.kapoor@lexford.legal MyNewPassword123
 """
 
 import sys

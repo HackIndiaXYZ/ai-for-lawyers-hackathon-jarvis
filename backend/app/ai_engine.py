@@ -189,7 +189,7 @@ def analyze_document_content(
                 "candidate_date": "2024-03-12",
                 "source_page_or_ref": "Clause 2.1, Page 3",
                 "verified": True,
-                "verified_by": "Alex Carter (Managing Attorney)",
+                "verified_by": "Arjun Kapoor (Managing Attorney)",
                 "verified_at": "2026-10-21 16:40:00"
             },
             {
@@ -198,7 +198,7 @@ def analyze_document_content(
                 "candidate_date": "2026-04-10",
                 "source_page_or_ref": "Annexure P-4, Page 12",
                 "verified": True,
-                "verified_by": "Alex Carter (Managing Attorney)",
+                "verified_by": "Arjun Kapoor (Managing Attorney)",
                 "verified_at": "2026-10-22 10:30:00"
             },
             {
@@ -216,7 +216,7 @@ def analyze_document_content(
                 "candidate_date": "2026-07-22",
                 "source_page_or_ref": "Plaint Verification, Page 24",
                 "verified": True,
-                "verified_by": "Alex Carter (Managing Attorney)",
+                "verified_by": "Arjun Kapoor (Managing Attorney)",
                 "verified_at": "2026-10-22 09:15:00"
             }
         ]
@@ -240,7 +240,7 @@ def analyze_document_content(
                 "candidate_date": "1991-08-14",
                 "source_page_or_ref": "Annexure P-1, Sub-Registrar Saket",
                 "verified": True,
-                "verified_by": "Alex Carter (Managing Attorney)",
+                "verified_by": "Arjun Kapoor (Managing Attorney)",
                 "verified_at": "2026-10-20 11:30:00"
             },
             {
@@ -249,7 +249,7 @@ def analyze_document_content(
                 "candidate_date": "2021-11-04",
                 "source_page_or_ref": "Death Certificate, Annexure P-2",
                 "verified": True,
-                "verified_by": "Alex Carter (Managing Attorney)",
+                "verified_by": "Arjun Kapoor (Managing Attorney)",
                 "verified_at": "2026-10-20 11:35:00"
             },
             {

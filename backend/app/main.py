@@ -87,7 +87,7 @@ def log_audit_event(
     entity_type: str,
     details: str,
     entity_id: Optional[str] = None,
-    actor_name: str = "Alex Carter",
+    actor_name: str = "Arjun Kapoor",
     actor_role: str = "Managing Attorney"
 ) -> AuditLog:
     # Retrieve latest audit record to chain hashes
@@ -283,7 +283,7 @@ def create_case(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session),
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     total_existing = len(session.exec(select(Case)).all())
@@ -344,7 +344,7 @@ def update_case(
     if not case:
         raise HTTPException(status_code=404, detail="Case not found")
 
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     updates = case_data.model_dump(exclude_unset=True)
@@ -384,7 +384,7 @@ def change_case_status(
     if not case:
         raise HTTPException(status_code=404, detail="Case not found")
 
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     old_status = case.status
@@ -413,7 +413,7 @@ def delete_case(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     # Enforce Role-Based Access Control (FR-001): Paralegal cannot delete cases
@@ -479,7 +479,7 @@ def upload_document(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     case_title = doc_data.case_title
@@ -613,7 +613,7 @@ def delete_document(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     if actor_role.lower() == "paralegal":
@@ -687,7 +687,7 @@ def verify_candidate_fact(
     if not summary:
         raise HTTPException(status_code=404, detail="AI Summary not found")
 
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     facts = json.loads(summary.candidate_facts_json)
@@ -740,7 +740,7 @@ def approve_ai_summary(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     # Enforce role restriction: Paralegals cannot sign off
@@ -817,7 +817,7 @@ def create_hearing(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     h = Hearing(**hearing_data.model_dump())
@@ -852,7 +852,7 @@ def delete_hearing(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     h = session.get(Hearing, hearing_id)
@@ -899,7 +899,7 @@ def create_task(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     t = TaskItem(**task_data.model_dump())
@@ -926,7 +926,7 @@ def toggle_task(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     t = session.get(TaskItem, task_id)
@@ -980,7 +980,7 @@ def create_client(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     c = ClientRecord(**client_data.model_dump())
@@ -1128,7 +1128,7 @@ def import_cases_json(
     current_user: Optional[User] = Depends(get_current_user_optional),
     session: Session = Depends(get_session)
 ):
-    actor_name = current_user.name if current_user else "Alex Carter"
+    actor_name = current_user.name if current_user else "Arjun Kapoor"
     actor_role = current_user.role if current_user else "Managing Attorney"
 
     imported_count = 0

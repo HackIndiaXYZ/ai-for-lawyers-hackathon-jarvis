@@ -10,10 +10,10 @@ import {
 import { api } from './api';
 
 const USERS = [
-  { name: 'Alex Carter', email: 'alex.carter@lexford.legal', role: 'Managing Attorney', initials: 'AC', color: '#2563eb' },
-  { name: 'Elena Rostova', email: 'elena.rostova@lexford.legal', role: 'Senior Associate', initials: 'ER', color: '#7c3aed' },
-  { name: 'Marcus Vance', email: 'marcus.vance@lexford.legal', role: 'Paralegal', initials: 'MV', color: '#059669' },
-  { name: 'Sarah Jenkins', email: 'sarah.jenkins@lexford.legal', role: 'Compliance Officer', initials: 'SJ', color: '#d97706' },
+  { name: 'Arjun Kapoor', email: 'arjun.kapoor@lexford.legal', role: 'Managing Attorney', initials: 'AK', color: '#2563eb' },
+  { name: 'Priya Nair', email: 'priya.nair@lexford.legal', role: 'Senior Associate', initials: 'PN', color: '#7c3aed' },
+  { name: 'Rohan Gupta', email: 'rohan.gupta@lexford.legal', role: 'Paralegal', initials: 'RG', color: '#059669' },
+  { name: 'Kavita Desai', email: 'kavita.desai@lexford.legal', role: 'Compliance Officer', initials: 'KD', color: '#d97706' },
 ];
 
 const NAV_ITEMS = [
@@ -1947,7 +1947,7 @@ function ModalUserGuide({ currentUser, onClose, onSwitchUser }) {
                   <span style={{ width: '24px', height: '24px', borderRadius: '50%', background: '#d97706', color: '#fff', display: 'grid', placeItems: 'center', fontSize: '11px', fontWeight: 'bold', flexShrink: 0 }}>4</span>
                   <div>
                     <b style={{ color: '#0f172a' }}>Digital Chamber Sign-Off</b>
-                    <p style={{ color: '#64748b', fontSize: '12px', margin: '2px 0 0 0' }}>Submitting generates an electronic signature (e.g. <code>SIGNED://Alex Carter/BAR-CHAMBER-2026</code>) and chains it into the tamper-evident audit log.</p>
+                    <p style={{ color: '#64748b', fontSize: '12px', margin: '2px 0 0 0' }}>Submitting generates an electronic signature (e.g. <code>SIGNED://Arjun Kapoor/BAR-CHAMBER-2026</code>) and chains it into the tamper-evident audit log.</p>
                   </div>
                 </div>
               </div>
@@ -2044,7 +2044,7 @@ function ModalCaseDetail({ detail, subTab, setSubTab, currentUser, onClose, onCh
                 {c.status}
               </span>
             </div>
-            <p>{c.case_number} · {c.case_type} · Lead Counsel: {c.assigned_to || 'Alex Carter'}</p>
+            <p>{c.case_number} · {c.case_type} · Lead Counsel: {c.assigned_to || 'Arjun Kapoor'}</p>
           </div>
           <button className="btn-icon" onClick={onClose}><X size={18} /></button>
         </div>

@@ -43,10 +43,10 @@ CasePilot AI features server-enforced **Role-Based Access Control (RBAC)**. You 
 
 | Persona | Role | Email | Password | Permissions & Role Boundaries |
 | :--- | :--- | :--- | :--- | :--- |
-| **Alex Carter** | `Managing Attorney` | `alex.carter@lexford.legal` | `attorney123` | **Full Chamber Control:** Can create/delete cases, schedule hearings, sign off on AI reviews, and verify audit chains. |
-| **Elena Rostova** | `Senior Associate` | `elena.rostova@lexford.legal` | `associate123` | **Senior Counsel:** Can manage cases, verify candidate facts, and sign off on advisory summaries. Restricted from matter deletion. |
-| **Marcus Vance** | `Paralegal` | `marcus.vance@lexford.legal` | `paralegal123` | **Research & Drafting:** Can upload evidence and draft tasks. **Server blocked** from deleting records or signing off on legal reviews. |
-| **Sarah Jenkins** | `Compliance Officer` | `sarah.jenkins@lexford.legal` | `compliance123` | **Auditor:** Inspects Section 65B/63 cryptographic hash chains, exports archives, and verifies chain-of-custody. |
+| **Arjun Kapoor** | `Managing Attorney` | `arjun.kapoor@lexford.legal` | `attorney123` | **Full Chamber Control:** Can create/delete cases, schedule hearings, sign off on AI reviews, and verify audit chains. |
+| **Priya Nair** | `Senior Associate` | `priya.nair@lexford.legal` | `associate123` | **Senior Counsel:** Can manage cases, verify candidate facts, and sign off on advisory summaries. Restricted from matter deletion. |
+| **Rohan Gupta** | `Paralegal` | `rohan.gupta@lexford.legal` | `paralegal123` | **Research & Drafting:** Can upload evidence and draft tasks. **Server blocked** from deleting records or signing off on legal reviews. |
+| **Kavita Desai** | `Compliance Officer` | `kavita.desai@lexford.legal` | `compliance123` | **Auditor:** Inspects Section 65B/63 cryptographic hash chains, exports archives, and verifies chain-of-custody. |
 
 ---
 
@@ -71,7 +71,7 @@ CasePilot AI features server-enforced **Role-Based Access Control (RBAC)**. You 
 > **Statutory Advisory Safeguard:** In strict compliance with Bar Council of India (BCI) ethical standards and FR-007, AI outputs are never authoritative until verified by counsel.
 - **Dynamic Fact Extraction:** AI extracts candidate dates, breach milestones, and statutory provisions (e.g., *Section 73 Contract Act*, *Order 39 CPC*, *Section 138 NI Act*).
 - **Interactive Verification:** Counsel can click **Accept** (green) or **Reject** (red) on individual facts, or edit fact text.
-- **Mandatory Lawyer Attestation:** Counsel must affirmatively check the statutory advisory acknowledgment before submitting their digital signature (`SIGNED://Alex Carter/BAR-CHAMBER-2026`).
+- **Mandatory Lawyer Attestation:** Counsel must affirmatively check the statutory advisory acknowledgment before submitting their digital signature (`SIGNED://Arjun Kapoor/BAR-CHAMBER-2026`).
 
 ### 5. Tamper-Evident Cryptographic Audit Chain (FR-010)
 - Meets **Section 65B Indian Evidence Act** and **Section 63 Bharatiya Sakshya Adhiniyam (BSA)** evidentiary standards.
@@ -114,9 +114,9 @@ graph TD
 
 You can verify the security boundaries in under 30 seconds:
 1. Open the app at `http://127.0.0.1:5173`.
-2. Notice you start as **Alex Carter (Managing Attorney)**.
+2. Notice you start as **Arjun Kapoor (Managing Attorney)**.
 3. Open any case (e.g. *Sharma vs. Eastern Industries*). The **Delete Case** button is enabled.
-4. Switch the persona dropdown in the top bar to **Marcus Vance (Paralegal)**.
+4. Switch the persona dropdown in the top bar to **Rohan Gupta (Paralegal)**.
 5. Notice that:
    - The UI warns that paralegals have restricted administrative access.
    - Deleting a case or signing off on an AI review returns an enforced `HTTP 403 Forbidden` response from the backend.
